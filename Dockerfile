@@ -16,3 +16,5 @@ RUN apk update \
 
 COPY default.conf /etc/nginx/conf.d/default.conf
 COPY certbot.sh /etc/nginx/ssl/
+
+CMD /bin/bash -c "exec nginx -g 'daemon off;' ";
